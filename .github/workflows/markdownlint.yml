@@ -1,9 +1,6 @@
 name: Markdown Lint
 on: 
   push:
-    branches:
-      - master
-      - main
     paths:
       - '**.md'
       - '**/.markdownlint.*'
