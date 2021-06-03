@@ -1,4 +1,4 @@
-name: Markdown Lint
+name: Lint
 on: 
   push:
     paths:
@@ -20,5 +20,5 @@ jobs:
       image: node:15.14-alpine
     steps:
       - uses: actions/checkout@master
-      - run: npm install markdownlint-cli@0.27.1
+      - run: npm ci
       - run: npm run lint:markdown
