@@ -5,7 +5,7 @@
   "description": "konfig-manager is tool for managing configuration for services with many different environments.",
   "main": "index.js",
   "directories": {
-    "test": "testing"
+    "test": "testing2"
   },
   "scripts": {
     "lint:markdown": "markdownlint '**/*.md' --ignore node_modules -c .markdownlint.json",
