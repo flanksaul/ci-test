@@ -2,8 +2,19 @@ name: Create Release
 on:
   workflow_dispatch: {}
 jobs:
-    # container:
-    #   image: flanksource/build-tools:v0.13.6
+  testing:
+    runs-on: ubuntu-latest
+    container:
+      image: flanksource/build-tools:v0.13.6
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test
+        run: | 
+          echo foo
+          kubectl --help
+          kustomize --help
+          ls -a
+
   semantic-release:
     runs-on: ubuntu-latest
     outputs:
