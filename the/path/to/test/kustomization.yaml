@@ -1,7 +1,9 @@
 resources:
 - deploy.yml
-
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 images:
 - name: flanksource/template-operator
-  newName: flanksource/template-operator
-  newTag: "%TAG_REPLACE%"
+  newTag: "10"
+
+kustomize edit set image flanksource/template-operator:10
