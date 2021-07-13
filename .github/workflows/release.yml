@@ -9,12 +9,6 @@ jobs:
       new-release-published: ${{ steps.semantic.outputs.new-release-published }}
     steps:
       - uses: actions/checkout@v2
-      - run: ls -a
-      - uses: actions/upload-artifact@v2
-        with:
-          name: deploy.yml
-          path: the/path/to/test/
-      - run: ls -R the/path/to/test/
       - uses: codfish/semantic-release-action@v1
         id: semantic
         env:
