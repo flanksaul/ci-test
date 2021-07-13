@@ -1,11 +1,10 @@
-
 name: Lint
 on: 
   push:
     paths:
       - '**.md'
-      - '**/.markdownlint.*'
-      - '**/github/workflows/markdownlint.yml'
+      - '**/*.markdownlint.*'
+      - '**/github/workflows/**/markdownlint.yml'
     branches-ignore:
       - main
       - master
@@ -13,7 +12,7 @@ on:
     paths:
       - '**.md'
       - '**/.markdownlint.*'
-      - '**/github/workflows/markdownlint.yml'
+      - '**/github/workflows/**/markdownlint.yml'
 jobs:
   markdown:
     runs-on: ubuntu-latest
