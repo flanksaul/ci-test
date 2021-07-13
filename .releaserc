@@ -14,7 +14,7 @@ plugins:
   - "@semantic-release/release-notes-generator"
   - - "@semantic-release/github"
     - assets:
-      - path: ./the/path/to/test/
+      - path: ./the/path/to/test/deploy.yml
         name: deploy.yml
 branches:
   - main
