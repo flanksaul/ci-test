@@ -4,3 +4,5 @@ plugins:
     - assets:
       - path: ./the/path/to/test/
         name: deploy.yml
+branches:
+  - main
