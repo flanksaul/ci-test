@@ -15,7 +15,7 @@ jobs:
           name: deploy.yml
           path: the/path/to/test/
       - run: ls -R the/path/to/test/
-      # - uses: codfish/semantic-release-action@v1
-      #   id: semantic
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: codfish/semantic-release-action@v1
+        id: semantic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
