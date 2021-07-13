@@ -14,8 +14,7 @@ jobs:
       - name: Test
         run: | 
           echo foo
-          kustomize build the/path/to/test/ > temp.yaml
-          cat temp.yaml
+
       # - uses: actions/upload-artifact@v2
       #   with:
       #     name: deploy.yml

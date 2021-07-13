@@ -6,4 +6,4 @@ images:
 - name: flanksource/template-operator
   newTag: "10"
 
-kustomize edit set image flanksource/template-operator:10
+# kustomize edit set image flanksource/template-operator:10
