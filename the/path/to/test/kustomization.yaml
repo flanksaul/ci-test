@@ -1,0 +1,7 @@
+resources:
+- deploy.yml
+
+images:
+- name: flanksource/template-operator
+  newName: flanksource/template-operator
+  newTag: "%TAG_REPLACE%"

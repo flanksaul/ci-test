@@ -460,6 +460,7 @@ spec:
     protocol: TCP
   selector:
     control-plane: template-operator
+
 ---
 apiVersion: apps/v1
 kind: Deployment
