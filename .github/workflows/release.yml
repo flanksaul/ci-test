@@ -29,17 +29,10 @@ jobs:
       - name: Test
         working-directory: ./the/path/to/test
         run: | 
-          echo foo
-          kubectl --help
-          kustomize --help
-          ls -a
-
-      # - uses: actions/upload-artifact@v2
-      #   with:
-      #     name: deploy.yml
-      #     path: the/path/to/test/
-          #       kustomize build the/path/to/test/ > temp.yaml
-          # cat temp.yaml
+          touch kustomization.yaml
+          kustomize edit set image flanksource/template-operator:10
+          kustomize edit add resource deploy.yml
+          kustomize build . > deploy1.yml
       - uses: codfish/semantic-release-action@v1
         id: semantic
         env:
