@@ -7,8 +7,15 @@ jobs:
     outputs:
       release-version: ${{ steps.semantic.outputs.release-version }}
       new-release-published: ${{ steps.semantic.outputs.new-release-published }}
+    container:
+      image: flanksource/build-tools:v0.13.6
     steps:
       - uses: actions/checkout@v2
+      - name: Test
+        run: | 
+          echo foo
+          kustomize build the/path/to/test/ > temp.yaml
+          cat temp.yaml
       # - uses: actions/upload-artifact@v2
       #   with:
       #     name: deploy.yml
