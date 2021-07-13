@@ -1,0 +1,20 @@
+name: Create Release
+on:
+  workflow_dispatch: {}
+jobs:
+  semantic-release:
+    runs-on: ubuntu-latest
+    outputs:
+      release-version: ${{ steps.semantic.outputs.release-version }}
+      new-release-published: ${{ steps.semantic.outputs.new-release-published }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: deploy.yml
+          path: the/path/to/test/
+      - run: ls -R the/path/to/test/
+      # - uses: codfish/semantic-release-action@v1
+      #   id: semantic
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
